@@ -36,4 +36,4 @@
 Bu proje [@AliaRior](https://github.com/AliaRior) tarafından geliştirilmiştir.
 
 ## 📄 Lisans
-Bu proje MIT lisansı altındadır.
+Tüm Hakları Saklıdır ©AliaRior (All Rights Reserved) - Bu kodların kopyalanması, değiştirilmesi veya ticari amaçla dağıtılması yasaktır.
