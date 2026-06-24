@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+  <title>İşletme Profili Denetleyicisi</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">🔍</div>
+      <h1>Profil Denetimi</h1>
+    </div>
+    
+    <div id="main-view" class="view active">
+      <div class="info-card">
+        <p class="limit-text">Kalan Günlük Denetim: <span id="limit-count">...</span></p>
+      </div>
+      
+      <button id="btn-audit" class="btn primary-btn">
+        <span class="btn-text">Denetimi Başlat</span>
+      </button>
+      
+      <div id="status-message" class="status-message hidden">
+        İşlem yapılıyor...
+      </div>
+      
+      <button id="btn-pdf-report" class="btn secondary-btn hidden" style="margin-top: 15px; background: #f8fafc; color: #4f46e5; border-color: #4f46e5;">
+        <span>📄 PDF Raporu İndir</span>
+      </button>
+      
+      <div class="premium-support">
+        <p>Profesyonel yardım mı arıyorsunuz?</p>
+        <a href="https://www.fidandanismanlik.com/p/google-isletme-profili-yonetimi.html" target="_blank" class="btn secondary-btn">Fidan Danışmanlık</a>
+      </div>
+    </div>
+    
+    <div id="payment-view" class="view">
+      <div class="pay-card">
+        <h2>Limit Doldu</h2>
+        <p>Günlük ücretsiz denetim hakkınızı (2/2) doldurdunuz.</p>
+        <p class="sub-text" style="color:#64748b; font-size:12px;">Daha kapsamlı ve sınırsız denetim için Premium versiyona geçin.</p>
+        
+        <a href="https://www.shopier.com/46455635" target="_blank" class="btn primary-btn pay-btn" style="text-decoration:none; display:block; margin-top:15px; font-size:14px; box-sizing: border-box; text-align: center; background: #0f172a;">
+          Shopier ile Premium Al
+        </a>
+
+        <div style="margin-top:20px; border-top:1px solid #e2e8f0; padding-top:15px;">
+          <label style="display:block; font-size:12px; color:#64748b; margin-bottom:5px; text-align:left;">Lisans Kodunuz Var Mı?</label>
+          <div style="display:flex; gap:5px;">
+            <input type="text" id="license-input" placeholder="Örn: FDN-XXXX" style="flex:1; padding:8px; border:1px solid #cbd5e1; border-radius:4px; font-size:13px; text-transform:uppercase;">
+            <button id="btn-verify-license" class="btn" style="background:#4f46e5; color:white; border:none; padding:8px 12px; border-radius:4px; cursor:pointer;">Doğrula</button>
+          </div>
+          <div id="license-status" style="font-size:12px; margin-top:5px; text-align:left;"></div>
+        </div>
+
+        <button id="btn-back" class="text-btn" style="margin-top:15px;">Vazgeç</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

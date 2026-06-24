@@ -1,0 +1,112 @@
+.gbp-audit-issue {
+  border: 3px solid #ff4d4f !important;
+  position: relative !important;
+  border-radius: 4px;
+  background-color: rgba(255, 77, 79, 0.05);
+  transition: all 0.3s ease;
+}
+
+.gbp-audit-issue:hover {
+  background-color: rgba(255, 77, 79, 0.1);
+}
+
+.gbp-audit-success {
+  border: 3px solid #10b981 !important;
+  position: relative !important;
+  border-radius: 4px;
+  background-color: rgba(16, 185, 129, 0.05);
+  transition: all 0.3s ease;
+}
+
+.gbp-audit-success:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.gbp-audit-tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 9999;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 13px;
+  font-family: 'Inter', Roboto, sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-weight: 500;
+}
+
+.gbp-audit-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.gbp-audit-issue:hover .gbp-audit-tooltip,
+.gbp-audit-success:hover .gbp-audit-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.gbp-audit-summary-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  z-index: 999999;
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-family: 'Inter', Roboto, sans-serif;
+}
+
+.gbp-audit-summary-box h3 {
+  margin: 0 0 10px 0;
+  color: #1a1a1a;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gbp-audit-summary-box ul {
+  padding-left: 20px;
+  margin: 0;
+  color: #595959;
+  font-size: 14px;
+}
+
+.gbp-audit-summary-box li {
+  margin-bottom: 6px;
+}
+
+.gbp-audit-summary-box .gbp-audit-action {
+  margin-top: 15px;
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: opacity 0.2s;
+}
+
+.gbp-audit-summary-box .gbp-audit-action:hover {
+  opacity: 0.9;
+}

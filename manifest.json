@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Google İşletme Profili Denetleyicisi",
+  "version": "1.0",
+  "description": "Google Haritalar ve Arama sonuçlarındaki işletme profillerini Google kurallarına göre analiz eder.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://www.google.com/*",
+    "*://www.google.com.tr/*",
+    "*://maps.google.com/*",
+    "*://maps.google.com.tr/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "İşletme Profili Denetimi"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.google.com/maps*",
+        "*://www.google.com.tr/maps*",
+        "*://maps.google.com/*",
+        "*://maps.google.com.tr/*"
+      ],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
